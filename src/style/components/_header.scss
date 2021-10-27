@@ -1,0 +1,124 @@
+.header {
+  background-image: url("../../asset/img/header.png");
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  
+
+  h1 {
+    font-family: $font-light;
+    font-size: 64px;
+    @media screen and (max-width: 430px){
+        font-size: 32px;
+    }
+    @media screen and (max-width: 1000px){
+      font-size: 2.5rem;
+
+  }
+
+  }
+
+  .titre,
+  .defiler {
+    margin-left: 10%;
+  }
+
+  .titre {
+    position: absolute;
+    top: 20%;
+    width: 60%;
+    color: $blanc;
+    @media screen and (max-width: 430px){
+      width: 80%;
+  }
+    
+
+    .gras {
+      font-family: $font-bold;
+      white-space: nowrap;
+      font-size: 64px;
+      @media screen and (max-width: 430px) {
+        white-space: normal;
+        font-size: 32px;
+      }
+      @media screen and (max-width: 1000px){
+        font-size: 2.5rem;
+  
+    }
+    }
+
+    p {
+      margin-top: 5%;
+      font-family: $font-light;
+      font-size: 20px;
+    }
+    @media screen and (max-width: 1000px){
+      font-size: 1rem;
+
+  }
+  }
+
+  .defiler {
+    position: absolute;
+    bottom: 15%;
+    margin-left: 6%;
+    transform: rotate(-90deg);
+    width: fit-content;
+    color: $blanc;
+    font-family: $font-light;
+
+    @media screen and (max-width: 430px){
+      margin: 0;
+  }
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        &::after, &::before {
+          background-color: $blanc;
+        }
+      }
+    }
+
+    
+
+    span {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $blanc;
+      left: -50px;
+      transform: translateY(-10px);
+
+      &::after{
+      content: "";
+      position: absolute;
+      background-color: transparent;
+      width: 10px;
+      height: 2px;
+      transform: rotate(45deg) translate(20%, 3px);
+      transition: 1s;
+      
+      }
+
+      &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background-color: transparent;
+      transform: rotate(-45deg) translate(20%, -3px);
+      transition: 1s;
+
+
+      }
+
+    }
+
+
+  }
+}

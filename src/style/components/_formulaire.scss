@@ -1,0 +1,314 @@
+.formulaire-content {
+  margin-top: 5%;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "T F";
+  height: max-content;
+
+  @media screen and (max-width: 430px){
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: 
+    "T"
+    "F";
+  }
+
+  .form-texte {
+    grid-area: T;
+    width: 80%;
+
+    h4 {
+      font-family: $font-bold;
+      text-transform: uppercase;
+      color: $bleu2;
+      font-size: 12px;
+    }
+    h2 {
+      font-family: $font-light;
+      font-size: 48px;
+      @media screen and (max-width: 1000px) {
+        font-size: 24px;
+      @media screen and (max-width: 430px){
+        font-size: 24px;
+      }
+    }
+    }
+    p {
+      width: 100%;
+      font-family: $font-regular;
+      font-size: 20px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 1000px) {
+        font-size: 1rem;
+      @media screen and (max-width: 430px){
+      font-size: 15px;
+      }
+    }
+    }
+  }
+
+  .formulaire {
+    position: relative;
+      grid-area: F;
+      width: 100%;
+      height: max-content;
+      @media screen and (max-width: 430px){
+        margin-bottom: 10%;
+      }
+
+      .form-message {
+        position: absolute;
+        bottom: -40px;
+        font-family: $font-regular;
+      }
+     
+      .form-content {
+        height: 450px;
+        display: grid;
+        margin-bottom: 10%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 10% 15% 10% 35% 10% 10% ;
+        grid-gap: 10px 0;
+        grid-template-areas: 
+        'N P'
+        'M T'
+        'S S'
+        'O .'
+        'J J'
+        'C C'
+        'E E';
+      
+        @media screen and (max-width: 430px){
+        display: block;
+        height: max-content;
+        margin-bottom: 20%;
+        ;
+
+        }
+        
+
+      }
+      .input-nom {
+        grid-area: N;
+        &.error {
+          border-color: red;
+        }
+        
+      }
+      .input-prenom {
+        grid-area: P;
+      }
+      .input-mail{
+        grid-area: M;
+       
+      }
+      .input-tel {
+        grid-area: T;
+      }
+      .input-sujet{
+        grid-area: O;
+      }
+      .input-message{
+        grid-area: J;
+        height: 150px;
+        &.error {
+          border-color: red;
+        }
+      }
+      #checkbox {
+        grid-area: C;
+        display: flex;
+        width: 90%;
+        
+
+        &.error {
+          border: 1px solid red;
+          border-radius: 5px;
+        }
+
+        .checkbox {
+          margin-right: 5%;
+          width: 35px;
+          height: 35px;
+
+          @media screen and (max-width: 430px){
+            width:60px;
+            height: 16px;
+          }
+                
+          
+          
+        }
+        p {
+          font-family: $font-regular;
+          font-size: 12px;
+          
+          
+        }
+      
+      }
+      .button {
+        grid-area: E;
+      }
+      .sperateur {
+        grid-area: S;
+      }
+
+      .sperateur {
+
+        p{
+        content: "";
+        background-color: $gris1;
+        height: 1px;
+        width: 95%;
+        margin-top: 7%  ;
+        }
+      }
+
+    #not-mail {
+        display: none;
+        position: absolute;
+        top: 8px;
+        color: red;
+        right: 0;
+        transform-origin: 50% 50%;
+    }
+
+    
+        
+         
+
+      textarea {
+        width: 80%;
+        border: none;  
+        border-radius: 5px;
+        resize: none;
+        font-family: $font-regular;
+        position: absolute;
+        right: 0;
+        height: 100%;
+        @media screen and (max-width: 430px){
+          width: 75%;
+        }
+
+        &:focus {
+          outline-color: $bleu2;
+        }
+      }
+
+
+  }
+  .button {
+    background-color: $bleu2;
+    font-family: $font-bold !important;
+    font-size: 20px;
+    color: $blanc;
+    width: 162px !important;
+    border: none;
+    border-radius: 5px;
+    
+    &:hover {
+      background-color: $bleu3;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 430px) {
+      margin-top: 5%;
+      font-size: 1rem;
+      height: 50px;
+    }
+  
+  }
+
+  .form-input {
+    font-family: $font-regular;
+    border: 1px solid $gris1;
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    position: relative;
+    height: 80%;
+    align-items: center;
+    @media screen and (max-width: 430px){
+      height: 30px;
+      width: 100%;
+      margin-bottom: 10%;
+    }
+
+      input,select {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        border: none;
+        border-radius: 5px; 
+        font-family: $font-regular;
+        @media screen and (max-width: 430px){
+          width: 70%;
+        }
+
+      }
+
+      select:focus {
+        outline-color: $bleu2;
+
+      }
+
+      input:focus {
+        outline-color: $bleu2;
+        
+      }
+
+      select {
+        font-size: 15px;
+        font-family: $font-regular;
+        width: 80%;
+        @media screen and (max-width: 1000px) {
+          font-size: 0.7rem;
+        
+        @media screen and (max-width: 430px){
+          font-size: 1rem;
+        }
+      }
+        option {
+          font-family: $font-regular;
+          font-size: 18px;
+          @media screen and (max-width: 430px){
+            font-size: 1rem;
+          }
+        }
+        
+      }
+   
+    
+    p {
+      color: $gris3;
+      width: 20%;
+      font-size: 14px;
+      @media screen and (max-width: 1000px) {
+        font-size: 12px;
+      }
+      p {
+        
+        font-size: 10px;
+        @media screen and (max-width: 1000px) {
+          font-size: 9px;
+        }
+      }
+    }
+
+    
+  }
+
+ 
+#input-mail.error {
+  
+    border-color: red;
+}
+
+}

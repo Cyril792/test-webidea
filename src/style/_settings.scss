@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "font-light";
+  src: url(../asset/font/Rubik-Light.ttf);
+}
+@font-face {
+  font-family: "font-bold";
+  src: url(../asset/font/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: "font-regular";
+  src: url(../asset/font/Rubik-Regular.ttf);
+}
+
+$font-light: "font-light";
+$font-bold: "font-bold";
+$font-regular: "font-regular";
+
+$bleu1: #65CEFF;
+$bleu2: #009DEA;
+$bleu3: #006FB7;
+$blanc: #FFFFFF;
+$gris1: #EEEEEE;
+$gris2: #DDDDDD;
+$gris3: #7F878D;
+$gris4: #49545D;
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+h2 {
+  font-weight: initial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
